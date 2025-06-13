@@ -3,7 +3,7 @@ const HeroSection = () => {
     <div className="w-full h-[60vh] md:h-[60vh]">
       <img
         className="w-full h-full   object-cover"
-        src="https://t4.ftcdn.net/jpg/02/49/50/15/240_F_249501541_XmWdfAfUbWAvGxBwAM0ba2aYT36ntlpH.jpg"
+        src="https://as1.ftcdn.net/v2/jpg/11/90/52/88/1000_F_1190528810_TBVoSVOSKuSa0xEhYyUcCeWBgK2bh3e9.jpg"
         alt="Hero Image"
       />
     </div>
