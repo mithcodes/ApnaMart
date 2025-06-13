@@ -10,20 +10,20 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import toast from "react-hot-toast";
 import Loader from "../../components/loader/Loader";
 
-const Signup = () => {
-    const context = useContext(myContext);
-    const {loading, setLoading } = context;
+// const Signup = () => {
+//     const context = useContext(myContext);
+//     const {loading, setLoading } = context;
 
-    // navigate 
-    const navigate = useNavigate();
+//     // navigate 
+//     const navigate = useNavigate();
 
-    // User Signup State 
-    const [userSignup, setUserSignup] = useState({
-        name: "",
-        email: "",
-        password: "",
-        role: "user"
-    });
+//     // User Signup State 
+//     const [userSignup, setUserSignup] = useState({
+//         name: "",
+//         email: "",
+//         password: "",
+//         role: "user"
+//     });
 
     /**========================================================================
      *                          User Signup Function 
