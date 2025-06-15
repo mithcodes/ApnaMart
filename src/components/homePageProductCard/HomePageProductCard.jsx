@@ -51,7 +51,7 @@ const HomePageProductCard = () => {
                                     <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer  hover:shadow-lg transition-all bg-white hover:scale-[1.02] duration-200">
                                         <img
                                             onClick={() => navigate(`/productinfo/${id}`)}
-                                            className="lg:h-80  h-96 w-full md:h-70 "
+                                            className="lg:h-60  h-46 w-full md:h-50 "
                                             src={productImageUrl}
                                             alt="blog"
                                         />
@@ -59,11 +59,11 @@ const HomePageProductCard = () => {
                                             {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                                                 E-bharat
                                             </h2> */}
-                                            <div className="flex">
-                                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                                            <div className="flex justify-between hover:shadow-lg ">
+                                            <h1 className="title-font text-sm md:text-sm font-medium text-gray-900 mb-3">
                                                 {title.substring(0, 25)}
                                             </h1>
-                                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                                            <h1 className="title-font text-sm font-medium text-gray-900 mb-3">
                                                 ₹{price}
                                             </h1>
                                             </div>

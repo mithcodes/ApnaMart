@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full bg-blue-600 text-white shadow-md z-[1000]">
+      <nav className="fixed top-0 w-full bg-blue-600 text-white shadow-md z-[1000] mb-2 ">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold">ApnaMart</Link>
