@@ -25,9 +25,7 @@ const Signup = () => {
         role: "user"
     });
 
-    /**========================================================================
-     *                          User Signup Function 
-    *========================================================================**/
+    
 
     const userSignupFunction = async () => {
         // validation 
@@ -82,7 +80,7 @@ const Signup = () => {
         <div className='flex justify-center items-center h-screen'>
             {loading && <Loader/>}
             {/* Login Form  */}
-            <div className="login_Form bg-blue-50 px-8 py-6 border border-blue-100 rounded-xl shadow-md">
+            <div className=" login_Form bg-blue-100 px-8 py-6 border border-blue-100 rounded-xl shadow-md ">
 
                 {/* Top Heading  */}
                 <div className="mb-5">

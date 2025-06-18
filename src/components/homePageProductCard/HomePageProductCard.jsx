@@ -47,7 +47,7 @@ const HomePageProductCard = () => {
                         {getAllProduct.slice(0, 8).map((item, index) => {
                             const { id, title, price, productImageUrl } = item
                             return (
-                                <div key={index} className="p-4 w-full md:w-1/4">
+                                <div key={index} className=" mx-auto p-4 w-8/10 md:w-1/4">
                                     <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer  hover:shadow-lg transition-all bg-white hover:scale-[1.02] duration-200">
                                         <img
                                             onClick={() => navigate(`/productinfo/${id}`)}

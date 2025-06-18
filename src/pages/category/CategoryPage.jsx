@@ -41,7 +41,7 @@ const CategoryPage = () => {
     }, [cartItems])
     return (
         <Layout>
-            <div className="mt-10">
+            <div className="mt-30">
                 {/* Heading  */}
                 <div className="">
                     <h1 className=" text-center mb-5 text-2xl font-semibold first-letter:uppercase">{categoryname}</h1>
@@ -70,11 +70,11 @@ const CategoryPage = () => {
                                                         <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
                                                             <img
                                                                 onClick={() => navigate(`/productinfo/${id}`)}
-                                                                className="lg:h-80  h-96 w-full"
+                                                                className="  h-46 w-full"
                                                                 src={productImageUrl}
                                                                 alt="blog"
                                                             />
-                                                            <div className="p-6">
+                                                            <div className=" p-6">
                                                                 {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                                                                     E-bharat
                                                                 </h2> */}
