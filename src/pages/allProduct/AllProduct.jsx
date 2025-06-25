@@ -47,7 +47,7 @@ const AllProduct = () => {
                     {getAllProduct.map((item, index) => {
                             const { id, title, price, productImageUrl } = item
                             return (
-                                <div key={index} className="p-4 w-full md:w-1/4 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
+                                <div key={index} className="p-4 w-full md:w-1/4  hover:scale-110 transition-all duration-300 ease-in-out">
                                     <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
                                         <img
                                             onClick={() => navigate(`/productinfo/${id}`)}
@@ -56,13 +56,14 @@ const AllProduct = () => {
                                             alt="blog"
                                         />
                                         <div className="p-6">
-                                           
-                                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                                                {title.substring(0, 25)}
+                                           <div className="flex justify-between">
+                                            <h1 className="title-font text-sm font-medium text-gray-900 mb-3">
+                                                {title.substring(0, 20)}
                                             </h1>
-                                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                                            <h1 className="title-font text-sm font-medium text-gray-900 mb-3">
                                                 ₹{price}
                                             </h1>
+                                            </div>
 
                                             <div
                                                 className="flex justify-center ">
