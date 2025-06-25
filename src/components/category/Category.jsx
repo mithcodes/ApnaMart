@@ -4,80 +4,79 @@ import { useNavigate } from "react-router";
 
 const category = [
   {
-    image: 'https://cdn-icons-png.flaticon.com/256/4359/4359963.png',
+    image: 'https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100',
     name: 'Fashion'
   },
   {
-    image: 'https://cdn-icons-png.flaticon.com/256/11833/11833323.png',
+    image: 'https://images.pexels.com/photos/994517/pexels-photo-994517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100',
     name: 'Shirt'
   },
   {
-    image: 'https://cdn-icons-png.flaticon.com/256/8174/8174424.png',
+    image: 'https://images.pexels.com/photos/6311609/pexels-photo-6311609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100',
     name: 'Jacket'
   },
   {
-    image: 'https://cdn-icons-png.flaticon.com/256/7648/7648246.png',
+    image: 'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/l/u/-original-imah2fjd7wfd9ksh.jpeg?q=70',
     name: 'Mobile'
   },
   {
-    image: 'https://cdn-icons-png.flaticon.com/256/12142/12142416.png',
+    image: 'https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=100',
     name: 'Laptop'
   },
   {
-    image: 'https://cdn-icons-png.flaticon.com/256/10686/10686553.png',
+    image: 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100',
     name: 'Shoes'
   },
   {
-    image: 'https://cdn-icons-png.flaticon.com/256/12114/12114279.png',
+    image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100',
     name: 'Home'
   },
   {
-    image: 'https://cdn-icons-png.flaticon.com/256/11946/11946316.png',
+    image: 'https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100',
     name: 'Books'
   }
 ];
 
 const Category = () => {
   const navigate = useNavigate();
-  return (
-    <div>
-      <div className="flex flex-col mt-5">
-        <div className="flex overflow-x-scroll lg:justify-center hide-scroll-bar">
-          <div className="flex">
-            {category.map((item, index) => {
-              return (
-                <div key={index} className="px-3 lg:px-10">
-                  <div
-                    onClick={() => navigate(`/category/${item.name}`)}
-                    className="w-16 h-16 lg:w-24 lg:h-24 max-w-xs rounded-full bg-blue-500 transition-all hover:bg-blue-400 cursor-pointer mb-1"
-                  >
-                    <div className="flex justify-center mb-12">
-                      <img src={item.image} alt="img" />
-                    </div>
-                  </div>
 
-                  <h1 className="text-sm lg:text-lg text-center font-medium title-font">
-                    {item.name}
-                  </h1>
-                </div>
-              );
-            })}
+  return (
+    <div className="py-8 px-4 mt-2">
+      <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Shop by Category</h2>
+
+      <div className="flex overflow-x-auto lg:justify-center hide-scroll-bar space-x-6 pb-2">
+        {category.map((item, index) => (
+          <div
+            key={index}
+            onClick={() => navigate(`/category/${item.name}`)}
+            className="flex flex-col items-center cursor-pointer group transition-transform hover:scale-105"
+          >
+            <div className="w-20 h-20 lg:w-28 lg:h-28 rounded-full overflow-hidden shadow-md border-2 border-gray-200 group-hover:shadow-lg group-hover:border-blue-400 transition-all duration-300 ease-in-out bg-white">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h1 className="mt-2 text-sm lg:text-base font-medium text-gray-700 group-hover:text-blue-500 transition-colors">
+              {item.name}
+            </h1>
           </div>
-        </div>
+        ))}
       </div>
 
-      {/* Fix: CSS injected safely using backticks (`) */}
+      {/* Hide scrollbar */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
-          .hide-scroll-bar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-          }
-          .hide-scroll-bar::-webkit-scrollbar {
-            display: none;
-          }
-        `
+            .hide-scroll-bar {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            }
+            .hide-scroll-bar::-webkit-scrollbar {
+              display: none;
+            }
+          `
         }}
       />
     </div>
@@ -85,3 +84,4 @@ const Category = () => {
 };
 
 export default Category;
+

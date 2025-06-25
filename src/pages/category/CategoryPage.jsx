@@ -78,7 +78,7 @@ const CategoryPage = () => {
                                                                 {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                                                                     E-bharat
                                                                 </h2> */}
-                                                                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                                                                <h1 className="title-font text-sm font-medium text-gray-900 mb-3">
                                                                     {title.substring(0, 25)}
                                                                 </h1>
                                                                 <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
