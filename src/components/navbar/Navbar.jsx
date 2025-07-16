@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {NavLink, Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import SearchBar from "../searchBar/SearchBar";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -15,40 +15,145 @@ const Navbar = () => {
     navigate("/login");
   };
 
+  // const NavLinks = ({ onClick }) => (
+  //   <>
+  //     <li><Link to="/" onClick={onClick}>Home</Link></li>
+  //     <li><Link to="/allproduct" onClick={onClick}>All Product</Link></li>
+
+  //     {!user && (
+  //       <>
+  //         <li><Link to="/signup" onClick={onClick}>Signup</Link></li>
+  //         <li><Link to="/login" onClick={onClick}>Login</Link></li>
+  //       </>
+  //     )}
+
+  //     {user?.role === "user" && (
+  //       <li><Link to="/user-dashboard" onClick={onClick}>User</Link></li>
+  //     )}
+
+  //     {user?.role === "admin" && (
+  //       <li><Link to="/admin-dashboard" onClick={onClick}>Admin</Link></li>
+  //     )}
+
+  //     {user && (
+  //       <li onClick={handleLogout} className="cursor-pointer">Logout</li>
+  //     )}
+
+  //     <li><Link to="/cart" onClick={onClick}>Cart({cartItems.length})</Link></li>
+  //   </>
+  // );
+   
   const NavLinks = ({ onClick }) => (
-    <>
-      <li><Link to="/" onClick={onClick}>Home</Link></li>
-      <li><Link to="/allproduct" onClick={onClick}>All Product</Link></li>
+  <>
+    <li>
+      <NavLink
+        to="/"
+        onClick={onClick}
+        className={({ isActive }) =>
+          isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+        }
+      >
+        Home
+      </NavLink>
+    </li>
+    <li>
+      <NavLink
+        to="/allproduct"
+        onClick={onClick}
+        className={({ isActive }) =>
+          isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+        }
+      >
+        All Product
+      </NavLink>
+    </li>
 
-      {!user && (
-        <>
-          <li><Link to="/signup" onClick={onClick}>Signup</Link></li>
-          <li><Link to="/login" onClick={onClick}>Login</Link></li>
-        </>
-      )}
+    {!user && (
+      <>
+        <li>
+          <NavLink
+            to="/signup"
+            onClick={onClick}
+            className={({ isActive }) =>
+              isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+            }
+          >
+            Signup
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/login"
+            onClick={onClick}
+            className={({ isActive }) =>
+              isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+            }
+          >
+            Login
+          </NavLink>
+        </li>
+      </>
+    )}
 
-      {user?.role === "user" && (
-        <li><Link to="/user-dashboard" onClick={onClick}>User</Link></li>
-      )}
+    {user?.role === "user" && (
+      <li>
+        <NavLink
+          to="/user-dashboard"
+          onClick={onClick}
+          className={({ isActive }) =>
+            isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+          }
+        >
+          User
+        </NavLink>
+      </li>
+    )}
 
-      {user?.role === "admin" && (
-        <li><Link to="/admin-dashboard" onClick={onClick}>Admin</Link></li>
-      )}
+    {user?.role === "admin" && (
+      <li>
+        <NavLink
+          to="/admin-dashboard"
+          onClick={onClick}
+          className={({ isActive }) =>
+            isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+          }
+        >
+          Admin
+        </NavLink>
+      </li>
+    )}
 
-      {user && (
-        <li onClick={handleLogout} className="cursor-pointer">Logout</li>
-      )}
+    {user && (
+      <li
+        onClick={handleLogout}
+        className="cursor-pointer hover:text-yellow-100"
+      >
+        Logout
+      </li>
+    )}
 
-      <li><Link to="/cart" onClick={onClick}>Cart({cartItems.length})</Link></li>
-    </>
-  );
+    <li>
+      <NavLink
+        to="/cart"
+        onClick={onClick}
+        className={({ isActive }) =>
+          isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+        }
+      >
+        Cart({cartItems.length})
+      </NavLink>
+    </li>
+  </>
+);
 
   return (
     <>
       <nav className="fixed top-0 w-full bg-blue-600 text-white shadow-md z-[1000] mb-2 ">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className=" text-lg  md:text-2xl font-bold">ApnaMart</Link>
+          <Link to="/" className=" text-xl md:text-3xl font-extrabold tracking-wide 
+             bg-gradient-to-r from-cyan-200 via-white to-purple-300 
+             text-transparent bg-clip-text drop-shadow-lg">ApnaMart</Link>
 
           {/* Desktop Nav + Search */}
           <div className="hidden lg:flex items-center gap-8">

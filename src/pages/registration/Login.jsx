@@ -67,20 +67,26 @@ const Login = () => {
         }
     }
     return (
-        <div className='flex justify-center items-center h-screen'>
+
+        
+        <div className='  flex justify-center items-center min-h-screen bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300  px-4'>
             {loading && <Loader />}
+
+
+
+
             {/* Login Form  */}
-            <div className=" login_Form bg-blue-100 px-8 py-6 border border-blue-100 rounded-xl shadow-md">
+            <div className=" login_Form w-full md:w-96 bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 px-8 py-6 border border-blue-300 rounded-xl shadow-md backdrop-blur-sm">
 
                 {/* Top Heading  */}
-                <div className="mb-5">
+                <div className="mb-7">
                     <h2 className='text-center text-2xl font-bold text-blue-500 '>
                         Login
                     </h2>
                 </div>
 
                 {/* Input One  */}
-                <div className="mb-3">
+                <div className="mb-2">
                     <input
                         type="email"
                         name="email"
@@ -92,12 +98,12 @@ const Login = () => {
                                 email: e.target.value
                             })
                         }}
-                        className='bg-blue-50 border border-blue-200 px-2 py-2 w-96 rounded-md outline-none placeholder-blue-200'
+                        className='w-full bg-white/90 text-blue-800 placeholder-blue-400 border border-blue-300 focus:ring-2 focus:ring-blue-400 px-4 py-2 rounded-md outline-none transition duration-200 shadow-sm mb-6'
                     />
                 </div>
 
                 {/* Input Two  */}
-                <div className="mb-5">
+                <div className="mb-2">
                     <input
                         type="password"
                         placeholder='Password'
@@ -108,12 +114,12 @@ const Login = () => {
                                 password: e.target.value
                             })
                         }}
-                        className='bg-blue-50 border border-blue-200 px-2 py-2 w-96 rounded-md outline-none placeholder-blue-200'
+                        className='w-full bg-white/90 text-blue-800 placeholder-blue-400 border border-blue-300 focus:ring-2 focus:ring-blue-400 px-4 py-2 rounded-md outline-none transition duration-200 shadow-sm mb-6'
                     />
                 </div>
 
                 {/* Signup Button  */}
-                <div className="mb-5">
+                <div className="mb-3">
                     <button
                         type='button'
                         onClick={userLoginFunction}
