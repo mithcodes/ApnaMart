@@ -32,7 +32,7 @@ const HeroSection = () => {
           <img src="/image/hero11.jpg" alt="Slide 4" className="w-full h-[50vh] md:h-[70vh] object-cover" />
         </div>
          <div>
-          <img src="public/image/hero5.jpg" alt="Slide 4" className="w-full h-[50vh] md:h-[70vh] object-cover" />
+          <img src="/image/hero6.jpg" alt="Slide 4" className="w-full h-[50vh] md:h-[70vh] object-cover" />
         </div>
       </Slider>
     </div>
