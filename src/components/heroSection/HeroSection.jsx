@@ -19,7 +19,7 @@ const HeroSection = () => {
 <div className="w-full  mx-auto mt-22 md:mt-22 overflow-x-hidden overflow-y-hidden ">
       <Slider {...settings}>
         <div>
-          <img src="/image/hero8.jpg" alt="Slide 1" className="w-full h-[50vh] md:h-[50vh] object-cover" />
+          <img src="/image/hero8.jpg" alt="Slide 1" className="w-full h-[50vh] md:h-[70vh] object-cover" />
         </div>
 
      <div>

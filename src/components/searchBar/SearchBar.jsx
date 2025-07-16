@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import myContext from "../../context/myContext";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 
 const SearchBar = () => {
@@ -10,7 +10,11 @@ const SearchBar = () => {
     const [search, setSearch] = useState("");
 
     // Filter Search Data
-    const filterSearchData = getAllProduct.filter((obj) => obj.title.toLowerCase().includes(search)).slice(0, 8)
+    // const filterSearchData = getAllProduct.filter((obj) => obj.title.toLowerCase().includes(search)).slice(0, 8)
+
+const filterSearchData = getAllProduct
+  .filter((obj) => obj.title.toLowerCase().includes(search.toLowerCase()))
+  .slice(0, 8);
 
     const navigate = useNavigate();
 
