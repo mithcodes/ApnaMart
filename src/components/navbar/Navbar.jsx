@@ -15,33 +15,6 @@ const Navbar = () => {
     navigate("/login");
   };
 
-  // const NavLinks = ({ onClick }) => (
-  //   <>
-  //     <li><Link to="/" onClick={onClick}>Home</Link></li>
-  //     <li><Link to="/allproduct" onClick={onClick}>All Product</Link></li>
-
-  //     {!user && (
-  //       <>
-  //         <li><Link to="/signup" onClick={onClick}>Signup</Link></li>
-  //         <li><Link to="/login" onClick={onClick}>Login</Link></li>
-  //       </>
-  //     )}
-
-  //     {user?.role === "user" && (
-  //       <li><Link to="/user-dashboard" onClick={onClick}>User</Link></li>
-  //     )}
-
-  //     {user?.role === "admin" && (
-  //       <li><Link to="/admin-dashboard" onClick={onClick}>Admin</Link></li>
-  //     )}
-
-  //     {user && (
-  //       <li onClick={handleLogout} className="cursor-pointer">Logout</li>
-  //     )}
-
-  //     <li><Link to="/cart" onClick={onClick}>Cart({cartItems.length})</Link></li>
-  //   </>
-  // );
    
   const NavLinks = ({ onClick }) => (
   <>
@@ -151,7 +124,7 @@ const Navbar = () => {
       <nav className="fixed top-0 w-full bg-blue-600 text-white shadow-md z-[1000] mb-2 ">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className=" text-xl md:text-3xl font-extrabold tracking-wide 
+          <Link to="/" className=" text-sm md:text-3xl font-extrabold tracking-wide 
              bg-gradient-to-r from-cyan-200 via-white to-purple-300 
              text-transparent bg-clip-text drop-shadow-lg">ApnaMart</Link>
 
