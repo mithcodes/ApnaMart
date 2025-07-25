@@ -29,7 +29,7 @@ const filterSearchData = getAllProduct
                     className=' bg-gray-200 placeholder-gray-400 rounded-lg px-2 py-2 flex-1 lg:w-96 md:w-96 outline-none text-black '
                 />
             </div> */}
-<div className="flex justify-center items-center py-2">
+<div className="flex  justify-center items-center py-2">
   <div className="relative w-full max-w-md">
     <input
       type="text"

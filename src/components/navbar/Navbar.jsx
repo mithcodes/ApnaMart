@@ -139,7 +139,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="w-3/5  lg:hidden flex items-center gap-4">
+          <div className="  lg:hidden flex items-center gap-2">
             <SearchBar />
             <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl">
               {menuOpen ? <FiX /> : <FiMenu />}
