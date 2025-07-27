@@ -66,8 +66,8 @@ const CategoryPage = () => {
                                             {filterProduct.map((item, index) => {
                                                 const { id, title, price, productImageUrl } = item
                                                 return (
-                                                    <div key={index} className="p-4 w-full md:w-1/4">
-                                                        <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
+                                                    <div key={index} className="p-4 w-full sm:w-2/4 md:w-1/4 ">
+                                                        <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer transition-shadow duration-300 bg-white">
                                                             <img
                                                                 onClick={() => navigate(`/productinfo/${id}`)}
                                                                 className="  h-46 w-full"

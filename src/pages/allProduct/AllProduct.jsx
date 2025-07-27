@@ -36,7 +36,7 @@ const AllProduct = () => {
         <Layout>
     <div className="py-8">
             {/* Heading  */}
-            <div className="">
+            <div className="mt-5">
                 <h1 className=" text-center mb-5 text-2xl font-semibold">All Products</h1>
             </div>
 
@@ -47,7 +47,7 @@ const AllProduct = () => {
                     {getAllProduct.map((item, index) => {
                             const { id, title, price, productImageUrl } = item
                             return (
-                                <div key={index} className="p-4 w-full md:w-1/4  hover:scale-110 transition-all duration-300 ease-in-out">
+                                <div key={index} className="p-4 w-full sm:w-2/4 md:w-1/4  hover:scale-110 transition-all duration-300 ease-in-out">
                                     <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
                                         <img
                                             onClick={() => navigate(`/productinfo/${id}`)}

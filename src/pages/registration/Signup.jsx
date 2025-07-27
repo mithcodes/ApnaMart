@@ -9,6 +9,10 @@ import { auth, fireDB } from "../../firebase/FirebaseConfig";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import toast from "react-hot-toast";
 import Loader from "../../components/loader/Loader";
+import { useLocation } from "react-router-dom";
+import { ArrowLeft } from "lucide-react"; 
+
+
 
 const Signup = () => {
     const context = useContext(myContext);
@@ -16,6 +20,7 @@ const Signup = () => {
 
     // navigate 
     const navigate = useNavigate();
+    const location = useLocation();
 
     // User Signup State 
     const [userSignup, setUserSignup] = useState({
@@ -79,6 +84,27 @@ const Signup = () => {
     return (
         <div className='flex justify-center items-center min-h-screen bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 px-4'>
             {loading && <Loader/>}
+
+
+
+<div className="absolute top-6 left-6">
+  <button
+    onClick={() => {
+      if (window.history.length > 2) {
+        navigate(-1);
+      } else {
+        navigate("/");
+      }
+    }}
+    className="flex items-center gap-1 text-blue-700 font-semibold hover:underline"
+  >
+    <ArrowLeft className="w-10 h-10" /> Back
+  </button>
+</div>
+
+
+
+
             {/* Login Form  */}
             <div className=" login_Form w-full md:w-96  bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 p-6 border border-blue-300 rounded-2xl shadow-xl backdrop-blur-sm" >
 

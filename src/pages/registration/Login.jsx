@@ -7,6 +7,9 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, fireDB } from "../../firebase/FirebaseConfig";
 import Loader from "../../components/loader/Loader";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
+import { useLocation } from "react-router-dom";
+import { ArrowLeft } from "lucide-react"; 
+
 
 const Login = () => {
     const context = useContext(myContext);
@@ -14,6 +17,9 @@ const Login = () => {
 
     // navigate 
     const navigate = useNavigate();
+
+    const location = useLocation();
+
 
     // User Signup State 
     const [userLogin, setUserLogin] = useState({
@@ -73,6 +79,20 @@ const Login = () => {
             {loading && <Loader />}
 
 
+<div className="absolute top-6 left-6">
+  <button
+    onClick={() => {
+      if (window.history.length > 2) {
+        navigate(-1);
+      } else {
+        navigate("/");
+      }
+    }}
+    className="flex items-center gap-1 text-blue-700 font-semibold hover:underline"
+  >
+    <ArrowLeft className="w-10 h-10" /> Back
+  </button>
+</div>
 
 
             {/* Login Form  */}

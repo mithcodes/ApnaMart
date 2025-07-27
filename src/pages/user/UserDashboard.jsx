@@ -12,9 +12,9 @@ const UserDashboard = () => {
     
     return (
         <Layout>
-            <div className=" container mx-auto px-4 py-5 lg:py-8">
+            <div className=" container mx-auto px-4 py-5 lg:py-8 ">
                 {/* Top  */}
-                <div className="top ">
+                <div className="top mt-10">
                     {/* main  */}
                     <div className=" bg-blue-50 py-5 rounded-xl border border-blue-100">
                         {/* image  */}
