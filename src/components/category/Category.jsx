@@ -42,7 +42,7 @@ const Category = () => {
 
   return (
     <div className="py-8 px-4 mt-2">
-      <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Shop by Category</h2>
+      {/* <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Shop by Category</h2> */}
 
       <div className="flex overflow-x-auto lg:justify-center hide-scroll-bar space-x-6 pb-2">
         {category.map((item, index) => (
