@@ -79,13 +79,33 @@ const Login = () => {
             {loading && <Loader />}
 
 
+{/* <div className="absolute top-6 left-6">
+  <button
+    onClick={() => {
+      if (document.referrer && !document.referrer.includes(window.location.hostname)) {
+      // Agar user kisi external page se aaya ho
+      window.history.back();
+    } else if (window.history.length > 2) {
+      navigate(-1); // normal back
+    } else {
+      navigate("/cart"); // default fallback cart
+    }
+  }}
+    className="flex items-center gap-1 text-blue-700 font-semibold hover:underline"
+  >
+    <ArrowLeft className="w-10 h-10" /> Back
+  </button>
+</div> */}
+
 <div className="absolute top-6 left-6">
   <button
     onClick={() => {
-      if (window.history.length > 2) {
-        navigate(-1);
+      const lastPath = localStorage.getItem("lastPath");
+      if (lastPath) {
+        navigate(lastPath);  // wahi page khol do
+        localStorage.removeItem("lastPath"); // clear kar do baad me
       } else {
-        navigate("/");
+        navigate("/"); // agar kuch save nahi hai to home
       }
     }}
     className="flex items-center gap-1 text-blue-700 font-semibold hover:underline"
