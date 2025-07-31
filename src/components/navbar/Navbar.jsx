@@ -124,7 +124,7 @@ const Navbar = () => {
       <nav className="fixed top-0 w-full bg-blue-600 text-white shadow-md z-[1000] mb-2 ">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className=" text-md md:text-3xl font-extrabold tracking-wide 
+          <Link to="/" className=" text-xl md:text-3xl font-extrabold tracking-wide 
              bg-gradient-to-r from-cyan-200 via-white to-purple-300 
              text-transparent bg-clip-text drop-shadow-lg">ApnaMart</Link>
 

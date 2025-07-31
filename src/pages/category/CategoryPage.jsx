@@ -66,11 +66,11 @@ const CategoryPage = () => {
                                             {filterProduct.map((item, index) => {
                                                 const { id, title, price, productImageUrl } = item
                                                 return (
-                                                    <div key={index} className="p-4 w-full sm:w-2/4 md:w-1/4 ">
+                                                    <div key={index} className="p-6 w-full sm:w-2/4 md:w-1/5 ">
                                                         <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer transition-shadow duration-300 bg-white">
                                                             <img
                                                                 onClick={() => navigate(`/productinfo/${id}`)}
-                                                                className="  h-46 w-full"
+                                                                className="  h-50 w-full"
                                                                 src={productImageUrl}
                                                                 alt="blog"
                                                             />
@@ -79,7 +79,7 @@ const CategoryPage = () => {
                                                                     E-bharat
                                                                 </h2> */}
                                                                 <h1 className="title-font text-sm font-medium text-gray-900 mb-3">
-                                                                    {title.substring(0, 25)}
+                                                                    {title.substring(0, 20)}
                                                                 </h1>
                                                                 <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                                                                     ₹{price}
