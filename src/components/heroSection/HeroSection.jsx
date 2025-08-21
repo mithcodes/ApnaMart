@@ -57,22 +57,23 @@ const HeroSection = () => {
     },
     {
       title: "Your Wardrobe, Reimagined",
-      text: "Discover a collection that blends timeless elegance...",
+      text: "Discover a collection crafted for every occasion — from everyday essentials to statement pieces that never go out of style...",
       img: "/image/2.png",
     },
     {
       title: "Smart Choices for Smart Living",
-      text: "Upgrade your lifestyle with cutting-edge gadgets...",
+      text: "Upgrade your lifestyle with cutting-edge gadgets designed to simplify your day and enhance your comfort.Make the smart move today and experience living that’s effortless, modern, and truly future-ready.",
       img: "/image/3.png",
     },
     {
       title: "Modern Tech for Modern Living",
-      text: "Explore products that simplify your everyday life...",
+      text:  "Discover the power of innovation with our modern tech collection. From smart gadgets to lifestyle essentials, each product is designed to bring ease, comfort, and efficiency into your everyday routine. Upgrade the way you live, work, and connect with technology that truly understands your needs.",
       img: "/image/4.png",
     },
     {
       title: "Style Meets Comfort",
-      text: "Shop for home that keeps you happy and comfy...",
+      text: "Explore a world of smart innovations crafted to simplify your everyday life and keep you ahead in style and convenience.",
+  
       img: "/image/5.png",
     },
   ];
