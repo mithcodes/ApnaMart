@@ -43,15 +43,15 @@ const HomePageProductCard = () => {
             {/* main  */}
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-5 mx-auto">
-                    <div className="flex flex-wrap -m-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {getAllProduct.slice(0, 16).map((item, index) => {
                             const { id, title, price, productImageUrl } = item
                             return (
-                                <div key={index} className=" mx-auto p-4 w-8/10 md:w-1/4">
-                                    <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer  hover:shadow-lg transition-all bg-white hover:scale-[1.02] duration-200">
+                                <div key={index} className=" p-4">
+                                    <div className="border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer hover:shadow-lg transition-transform bg-white hover:scale-105 duration-200">
                                         <img
                                             onClick={() => navigate(`/productinfo/${id}`)}
-                                            className="lg:h-60  h-46 w-full md:h-50 "
+                                            className="w-full h-48 md:h-56 lg:h-60 object-cover"
                                             src={productImageUrl}
                                             alt="blog"
                                         />

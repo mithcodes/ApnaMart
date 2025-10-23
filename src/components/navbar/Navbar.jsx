@@ -23,7 +23,7 @@ const Navbar = () => {
         to="/"
         onClick={onClick}
         className={({ isActive }) =>
-          isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+          isActive ? "text-blue-900 font-bold underline" : "hover:text-yellow-900"
         }
       >
         Home
@@ -34,7 +34,7 @@ const Navbar = () => {
         to="/allproduct"
         onClick={onClick}
         className={({ isActive }) =>
-          isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+          isActive ? "text-blue-900 font-bold underline" : "hover:text-yellow-900"
         }
       >
         All Product
@@ -48,7 +48,7 @@ const Navbar = () => {
             to="/signup"
             onClick={onClick}
             className={({ isActive }) =>
-              isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+             isActive ? "text-blue-900 font-bold underline" : "hover:text-yellow-900"
             }
           >
             Signup
@@ -59,7 +59,7 @@ const Navbar = () => {
             to="/login"
             onClick={onClick}
             className={({ isActive }) =>
-              isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+              isActive ? "text-blue-900 font-bold underline" : "hover:text-yellow-900"
             }
           >
             Login
@@ -74,7 +74,7 @@ const Navbar = () => {
           to="/user-dashboard"
           onClick={onClick}
           className={({ isActive }) =>
-            isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+            isActive ? "text-blue-900 font-bold underline" : "hover:text-yellow-900"
           }
         >
           User
@@ -88,7 +88,7 @@ const Navbar = () => {
           to="/admin-dashboard"
           onClick={onClick}
           className={({ isActive }) =>
-            isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+            isActive ? "text-blue-900 font-bold underline" : "hover:text-yellow-900"
           }
         >
           Admin
@@ -110,7 +110,7 @@ const Navbar = () => {
         to="/cart"
         onClick={onClick}
         className={({ isActive }) =>
-          isActive ? "text-yellow-300 font-semibold underline" : "hover:text-yellow-100"
+          isActive ? "text-blue-900 font-bold underline" : "hover:text-yellow-900"
         }
       >
         Cart({cartItems.length})
@@ -121,22 +121,39 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full bg-blue-600 text-white shadow-md z-[1000] mb-2 ">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/" className=" text-xl md:text-3xl font-extrabold tracking-wide 
-             bg-gradient-to-r from-cyan-200 via-white to-purple-300 
-             text-transparent bg-clip-text drop-shadow-lg">ApnaMart</Link>
+      <nav className="fixed top-0 w-full  backdrop-blur-2xl shadow-lg z-[1000]">
+  <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    
+    {/* Logo */}
+    <Link 
+      to="/" 
+      className="text-xl md:text-3xl font-extrabold tracking-wide 
+                 text-black bg-clip-text drop-shadow-lg">
+      ApnaMart
+    </Link>
 
           {/* Desktop Nav + Search */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* <div className="hidden lg:flex items-center gap-8">
             <SearchBar
             /> 
             <ul className=" flex gap-6 font-medium list none">
             <NavLinks />
             </ul>
+
+
+
+
             
-          </div>
+          </div> */}
+
+
+
+          <div className="hidden lg:flex items-center gap-8">
+      <SearchBar /> 
+      <ul className="flex gap-6 font-medium list-none">
+        <NavLinks />
+      </ul>
+    </div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center gap-4">
@@ -150,12 +167,14 @@ const Navbar = () => {
 
       {/* Mobile Drawer Menu */}
       {menuOpen && (
-        <div className="fixed top-16 right-0 w-2/4  h-full bg-blue-700 z-[999] shadow-lg p-6 transition-all duration-300 ease-in-out">
-          <ul className="flex flex-col gap-5 text-white font-medium">
+        <div className="fixed top-16 right-0 w-3/4 h-full bg-white/10 backdrop-blur-md shadow-lg z-[999] p-6 transition-all duration-300 ease-in-out">
+          <ul className="flex flex-col gap-5 text-black font-medium">
             <NavLinks onClick={() => setMenuOpen(false)} />
           </ul>
         </div>
       )}
+
+      <div className="h-5"></div>
     </>
   );
 };
